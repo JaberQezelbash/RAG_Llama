@@ -1,4 +1,4 @@
-# RAG-based finetuning of Llama-3.1-8B-Instruct
+## RAG-based finetuning of Llama-3.1-8B-Instruct
 
 
 
