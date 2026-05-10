@@ -118,7 +118,7 @@ For implementation details, configurations, metrics, and troubleshooting notes, 
 
 ## Dataset
 
-This project uses the *Customer IT Support / Multilingual Customer Support Tickets* dataset available here [Kaggle](https://www.kaggle.com/datasets/tobiasbueck/multilingual-customer-support-tickets?resource=download).
+This project uses the *Customer IT Support / Multilingual Customer Support Tickets* dataset available on [Kaggle](https://www.kaggle.com/datasets/tobiasbueck/multilingual-customer-support-tickets?resource=download).
 
 The dataset contains multilingual support tickets with fields such as:
 
