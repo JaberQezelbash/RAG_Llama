@@ -230,13 +230,13 @@ The dataset and outputs are intentionally not committed because they can be larg
 
 The project uses the **Customer IT Support / Multilingual Customer Support Tickets** dataset from Kaggle.
 
-The local dataset directory used in development was:
+The dataset directory used in development was:
 
 ```text
-C:\Users\Jaber\OneDrive - University of Florida\Educational\GitHub\Project_RAG\dataset\Customer IT Support -Ticket Dataset
+https://www.kaggle.com/datasets/tobiasbueck/multilingual-customer-support-tickets?resource=download
 ```
 
-The dataset folder contains five CSV files:
+The dataset contains five CSV files:
 
 ```text
 aa_dataset-tickets-multi-lang-5-2-50-version.csv
