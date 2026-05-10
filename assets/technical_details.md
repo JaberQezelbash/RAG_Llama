@@ -69,7 +69,7 @@ Validation with retrieve → rerank → generate
 
 ## 2. Dataset Details
 
-The dataset folder contains five CSV files:
+The [dataset](https://www.kaggle.com/datasets/tobiasbueck/multilingual-customer-support-tickets?resource=download) folder contains five CSV files:
 
 ```text
 aa_dataset-tickets-multi-lang-5-2-50-version.csv
