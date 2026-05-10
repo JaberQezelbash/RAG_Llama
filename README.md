@@ -280,4 +280,4 @@ That file includes:
 ## Author’s Note
 
 The goal was to build a clean and reproducible RAG-based pipeline that demonstrates how retrieval, reranking, and fine-tuning can work together in a realistic customer-support chatbot setting.
-The most important design choice is that *RAG remains central* throughout the project: during training-data construction, dusing LLM finetuning, during validation, and during final chatbot-style response generation.
+The most important design choice is that *RAG remains central* throughout the project: during training-data construction and LLM finetuning, during validation, and during final chatbot-style response generation.
