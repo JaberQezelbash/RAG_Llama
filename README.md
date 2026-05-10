@@ -52,9 +52,9 @@ The result is a practical RAG-based chatbot workflow for multilingual IT support
 | Dataset | Customer IT Support / Multilingual Customer Support Tickets (from [Kaggle](https://www.kaggle.com/datasets/tobiasbueck/multilingual-customer-support-tickets?resource=download)) |
 
 
----
 
-## What This Project Does
+
+### What This Model Does
 
 The project is split into four clear stages:
 
@@ -83,7 +83,7 @@ Fine-tune Llama adapter
 Validate using retrieve → rerank → generate
 ```
 
----
+
 
 ## Repository Structure
 
@@ -100,8 +100,6 @@ Validate using retrieve → rerank → generate
 │   ├── requirements.txt
 │   └── rag_architecture.png
 │
-├── dataset/
-│   └── Customer IT Support -Ticket Dataset/
 │
 ├── outputs/
 │   ├── processed/
@@ -117,11 +115,11 @@ For implementation details, configurations, metrics, and troubleshooting notes, 
 
 [`assets/technical_details.md`](assets/technical_details.md)
 
----
+
 
 ## Dataset
 
-This project uses the **Customer IT Support / Multilingual Customer Support Tickets** dataset.
+This project uses the *Customer IT Support / Multilingual Customer Support Tickets* dataset available here [Kaggle](https://www.kaggle.com/datasets/tobiasbueck/multilingual-customer-support-tickets?resource=download).
 
 The dataset contains multilingual support tickets with fields such as:
 
@@ -137,21 +135,13 @@ business_type
 tags
 ```
 
-Only rows with usable `subject`, `body`, and `answer` are used for supervised response-generation fine-tuning.
-
-The dataset itself is not included in this repository. Place the downloaded CSV files in:
-
-```text
-dataset/Customer IT Support -Ticket Dataset/
-```
-
 More dataset-processing details are available in [`assets/technical_details.md`](assets/technical_details.md).
 
----
+
 
 ## Key Features
 
-✅ RAG-first chatbot pipeline  
+✅ RAG-based chatbot pipeline  
 ✅ Multilingual support-ticket processing  
 ✅ FAISS-based dense retrieval  
 ✅ BGE-M3 embeddings  
@@ -163,7 +153,7 @@ More dataset-processing details are available in [`assets/technical_details.md`]
 ✅ Grounded response generation from retrieved solved tickets  
 ✅ Saves predictions, metrics, retrieved evidence, and adapter files  
 
----
+
 
 ## Quick Start
 
@@ -173,32 +163,13 @@ More dataset-processing details are available in [`assets/technical_details.md`]
 pip install -U pandas numpy scikit-learn tqdm ftfy faiss-cpu FlagEmbedding transformers datasets accelerate peft trl bitsandbytes sentencepiece protobuf safetensors huggingface_hub
 ```
 
-Or use:
-
-```bash
-pip install -r assets/requirements.txt
-```
-
----
-
 ### 2. Log in to Hugging Face
 
-Llama 3.1 is a gated model, so you need Hugging Face access and a token.
-
-Run:
+Llama 3.1 is a gated model, so you need Hugging Face access and a token. Run:
 
 ```bash
 python codes/00_token_login.py
 ```
-
-Expected output:
-
-```text
-Token saved for this session.
-Llama access works.
-```
-
----
 
 ### 3. Build RAG training data
 
@@ -216,19 +187,13 @@ outputs/sft_data/
 
 These include the cleaned train/validation splits, FAISS index, corpus, and RAG-grounded supervised fine-tuning records.
 
----
+
 
 ### 4. Fine-tune Llama
 
 ```bash
 python codes/02_train_llama_lora_or_qlora.py
 ```
-
-If CUDA is available, the script uses QLoRA.
-
-If CUDA is not available, it falls back to CPU LoRA with conservative settings.
-
----
 
 ### 5. Validate the RAG chatbot
 
@@ -248,7 +213,6 @@ and saves predictions and metrics to:
 outputs/validation_results_lora_or_qlora/
 ```
 
----
 
 ## Output Highlights
 
@@ -274,7 +238,7 @@ The validation output includes:
 - reranker scores,
 - and evaluation metrics.
 
----
+
 
 ## Example Use Case
 
@@ -291,28 +255,23 @@ The system retrieves similar solved tickets about AWS deployment failures, reran
 Thank you for reporting the AWS deployment issue. We understand the urgency and the impact on your operations. Please provide the deployment logs, recent configuration changes, affected services, and any CloudTrail or CloudFormation error messages. We recommend checking IAM permissions, service limits, and recent infrastructure updates while our team investigates further.
 ```
 
----
+
 
 ## Notes on CPU Training
 
 This project can run without a GPU, but Llama 3.1 8B is large.
-
 On CPU, training is slow. The default CPU configuration intentionally limits the number of training examples to keep the experiment practical.
-
 For faster and more complete fine-tuning, CUDA GPU training is strongly recommended.
-
 See [`assets/technical_details.md`](assets/technical_details.md) for CPU/GPU configuration details.
 
----
+
 
 ## Technical Details
 
 The README keeps the workflow high-level. For deeper implementation notes, see:
-
 [`assets/technical_details.md`](assets/technical_details.md)
 
 That file includes:
-
 - dataset preprocessing details,
 - RAG prompt format,
 - FAISS index construction,
@@ -327,6 +286,5 @@ That file includes:
 
 ## Author’s Note
 
-Thanks for checking out this project. My goal was to build a clean and reproducible RAG-first pipeline that demonstrates how retrieval, reranking, and fine-tuning can work together in a realistic multilingual customer-support setting.
-
-The most important design choice is that **RAG remains central throughout the project**: during training-data construction, during validation, and during final chatbot-style response generation.
+My goal was to build a clean and reproducible RAG-based pipeline that demonstrates how retrieval, reranking, and fine-tuning can work together in a realistic customer-support chatbot setting.
+The most important design choice is that *RAG remains central* throughout the project: during training-data construction, during validation, and during final chatbot-style response generation.
