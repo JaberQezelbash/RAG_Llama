@@ -3,7 +3,7 @@
 
 ## AI RAG Chatbot with Fine-Tuned Data (Llama 3.1 + BGE-M3 + FAISS)
 
-**RAG-first customer-support chatbot using [Meta Llama 3.1 8B Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct), [BAAI/bge-m3](https://huggingface.co/BAAI/bge-m3), [BAAI/bge-reranker-v2-m3](https://huggingface.co/BAAI/bge-reranker-v2-m3), FAISS retrieval, and LoRA/QLoRA fine-tuning on multilingual IT support tickets.**
+**RAG-based customer-support chatbot using [Meta Llama 3.1 8B Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct), [BAAI/bge-m3](https://huggingface.co/BAAI/bge-m3), [BAAI/bge-reranker-v2-m3](https://huggingface.co/BAAI/bge-reranker-v2-m3), FAISS retrieval, and LoRA/QLoRA fine-tuning on multilingual IT support tickets.**
 
 
 
