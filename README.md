@@ -20,9 +20,7 @@ This repository contains an end-to-end **Retrieval-Augmented Generation (RAG)** 
 
 Unlike a simple fine-tuning project, this project intentionally makes **RAG the core component**. The model is not trained only to memorize support answers. Instead, each supervised fine-tuning example is built around retrieved context from a FAISS-based knowledge base, and the validation pipeline also follows the same retrieve → rerank → generate workflow.
 
-> ⚠️ Disclaimer: This project is only for research, education, and portfolio demonstration.
-
-
+> ⚠️ Disclaimer: This project is only for experimentation and portfolio demonstration. It is not intended for real patient care or decision support.
 
 
 ## Motivation
