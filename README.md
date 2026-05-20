@@ -13,7 +13,7 @@
 <img width="800" alt="kan_plot" src="https://github.com/JaberQezelbash/RAG-finetune-Llama-3.1-8B-Instruct/blob/main/assets/model.svg">
 -->
 
-<img width="800" alt="kan_plot" src="https://github.com/JaberQezelbash/RAG-finetune-Llama-3.1-8B-Instruct/blob/main/assets/model.png">
+<img width="800" alt="kan_plot" src="https://github.com/JaberQezelbash/LangGraph-AzureAI-Agents/blob/main/assets/model.png">
 
 
 This repository contains an end-to-end **Retrieval-Augmented Generation (RAG)** project for customer-support automation. The goal is to build a multilingual IT-support chatbot that retrieves relevant solved tickets, uses them as grounding evidence, and then generates a professional support response using a fine-tuned Llama model.
